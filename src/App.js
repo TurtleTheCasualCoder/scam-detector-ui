@@ -142,6 +142,8 @@ function LoadingSpinner() {
   useEffect(() => {
     const t = setInterval(() => setStep(s => (s + 1) % steps.length), 900);
     return () => clearInterval(t);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, []);
   return (
     <div style={{ textAlign: "center", padding: "40px 0" }}>
